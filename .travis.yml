@@ -4,7 +4,7 @@ mono:
 solution: ExcelReader.sln
 install:
   - nuget restore ExcelReader.sln
-  - nuget install NUnit.Console -Version 3.12.0 -OutputDirectory testrunner
+  - nuget install NUnit.Console -Version 3.10 -OutputDirectory testrunner
 script:
   - msbuild /p:Configuration=Release ExcelReader.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.3.12.0/tools/nunit3-console.exe ./ExcelReaderTest/bin/Release/ExcelReaderTest.dll
+  - mono ./testrunner/NUnit.ConsoleRunner.3.10/tools/nunit3-console.exe ./ExcelReaderTest/bin/Release/ExcelReaderTest.dll
